@@ -6,21 +6,21 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header>
+
       <header class="page-header">
         <nav class="main-nav">
           <p class="logo">
-            <img src="#"  alt="Логотип компании">
+            <img src="#"  alt="Логотип">
           </p>
           <ul class="site-navigation">
             <li class="site-navigation-item">
-              <a href="index.html">Главная</a>
+              <a href="#">Главная</a>
             </li>
             <li class="site-navigation-item">
               <a href="#"> О Седоне</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Гостиницы</a>
+              <a href="catalog.html">Гостиницы</a>
             </li>
           </ul>
               <ul class="navigation-list navigation-user">
@@ -34,7 +34,8 @@
                 <li class="navigation-item">
                   <a class="navigation-link" href="#">
                     <span class="visually-hidden">
-                      Нравится
+                      Нравится В избранном
+
                     </span>
                   </a>
                 </li>
@@ -50,12 +51,11 @@
 
   <main class="main-index">
     <section class="start">
-        <img class="#">
+        <img src="#" alt="Вид Седоны с высоты птичьего полета">
         <h1>Sedona</h1>
-        <p>"Because the Grand Canyon sucks!"</p>
-    <h2>Welcome</h2>
 
-    <p>to the gorgeous</p>
+
+
     </section>
     <section class="avantages">
     <h2>Седона — небольшой городок в Аризоне,
@@ -66,9 +66,9 @@
       <li class="advantages-items">
         <h3>Настоящий городок</h3>
         <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-
+        <img src="#" alt="Теплый летний вечер в Седоне">
       </li>
-<img src="#" alt="photo-1">
+
       <li class="advantages-items">
         <h3>Небольшая
           площадь</h3>
@@ -90,9 +90,10 @@
         <h3>Там есть
           мост дьявола</h3>
         <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-<img src="#" alt="photo-2">
+<img src="#" alt="Горные пейзажи с захватывающей историей">
       </li>
       </ul>
+      </section>
       <section class="offers">
 <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
 <p>Опытный персонал и качественное обслуживание!</p>
@@ -114,20 +115,28 @@
         </ul>
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        <a class="button" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
 </section>
 
 
 <section class="submition">
 <h3>Подпишитесь на рассылку</h3>
 <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+<form action="https://sedona.ru" method="post">
+  <label>
+    Ваш e-mail
+    <input type="text" name="e-mail" required>
+  </label>
 
+  <button type="submit">Подписаться</button> <!-- кнопка, предназначенная для отправки формы -->
+</form>
 </section>
 
 </main>
 
 <footer class="page-footer">
   <section class="footer-social">
+    <h3>Наши Социальные сети</h3>
     <ul class="footer-social-list">
       <li class="footer-social-item">
         <a class="button" href="#">
@@ -149,8 +158,10 @@
 
   </section>
 <section class="footer-contacts">
-  <a class="phone" href="+7(812)812-12-12">+7(812)812-12-12</a></section>
+  <h3 сlass="visually-hidden">Наш номер телефона для связи</h3>
+  <a class="phone" href="tel:+7(812)812-12-12">+7(812)812-12-12</a></section>
 <section class="HTML-Academy">
+  <h3 сlass="visually-hidden">Логотип Академии</h3>
   <a class="htmlacademy-link" href="https://htmlacademy.ru/">html academy</a>
   </section>
 </footer>
