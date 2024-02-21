@@ -41,12 +41,12 @@
                         </a>
                     </li>
                     <li class="navigation-user-item">
-                        <a class="button-basic button-wish" href="#">ХОЧУ СЮДА!</a>
+                        <a class="button-basic" href="#">ХОЧУ СЮДА!</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div class="bg">
+<div class="bg">
         <main class="main-index">
             <header class="main-header">
                 <h1 class="main-header-title">Гостиницы Седоны</h1>
@@ -63,7 +63,7 @@
                 <h2 class="visually-hidden">Инфраструктура</h2>
                 <form action="https://echo.htmlacademy.ru" method="get">
                     <fieldset class="filter-item">
-                        <legend>Инфраструктура</legend>
+                        <legend class="filter-title">Инфраструктура</legend>
                         <label class="visually-hidden" for="pool">
                             <input class="control-input" type="checkbox" name="pool" id="pool" checked>
                             Бассейн
@@ -79,7 +79,7 @@
                     </fieldset>
                     <h2 class="visually-hidden">Тип жилья</h2>
                     <fieldset class="filter-item">
-                        <legend>Тип жилья:</legend>
+                        <legend class="filter-title">Тип жилья:</legend>
                         <label class="visually-hidden" for="hotel">
                             <input type="radio" id="hotel" name="type" value="hotel">Гостиница</label>
                         <label class="visually-hidden" for="motel">
@@ -89,7 +89,7 @@
                     </fieldset>
                     <h2 class="visually-hidden">Стоимость, ₽:</h2>
                     <fieldset class="filter-item">
-                        <legend>Стоимость, ₽:</legend>
+                        <legend class="filter-title">Стоимость, ₽:</legend>
                         <label class="visually-hidden" for="minimum">
                             От
                             <input type="number" name="minimum" required placeholder="От" id="minimum">
@@ -100,8 +100,8 @@
                             <input type="number" name="maximum" required placeholder="До" id="maximum">
                         </label>
                     </fieldset>
-                    <button class="button button-check " type="submit">Применить</button>
-                    <button class="button button-reset" type="reset">Сбросить</button>
+                    <button class="button button-check " type="submit">ПРИМЕНИТЬ</button>
+                    <button class="button button-reset" type="reset">СБРОСИТЬ</button>
                 </form>
             </section>
         </div>
@@ -135,8 +135,8 @@
                         <p>От 4000 ₽</p>
                         <p class="star">s</p>
                         <p class="rate">РЕЙТИНГ:8,5</p>
-                        <a class="button-basic" href="#">Подробнее</a>
-                        <button class="button button-favorite" type="submit">В избранное</button>
+                        <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
+                        <button class="button button-favorite" type="submit">В ИЗБРАННОЕ</button>
                     </li>
                     <li class="hotels-item">
                         <h3>Villas at Poco Diablo</h3>
@@ -146,8 +146,8 @@
                         <p>От 5000 ₽</p>
                         <p class="star">s</p>
                         <p class="rate">РЕЙТИНГ:9,2</p>
-                        <a class="button-basic" href="#">Подробнее</a>
-                        <button class="button button-favorite"type="submit">В избранное</button>
+                        <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
+                        <button class="button button-favorite"type="submit">В ИЗБРАННОЕ</button>
                     </li>
                     <li class="hotels-item">
                         <h3>Desert Quail Inn</h3>
@@ -156,8 +156,8 @@
                         <p>От 2500 ₽</p>
                         <p class="star">s</p>
                         <p class="rate">РЕЙТИНГ:6,9</p>
-                        <a class="button-basic" href="#">Подробнее</a>
-                        <button class="button button-favorite"type="submit">В избранное</button>
+                        <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
+                        <button class="button button-favorite"type="submit">В ИЗБРАННОЕ</button>
                     </li>
                     <li class="hotels-item">
                         <h3>GreenTree Inn</h3>
@@ -166,8 +166,8 @@
                         <p>От 1500 ₽</p>
                         <p class="star">s</p>
                         <p class="rate">РЕЙТИНГ:5,0</p>
-                        <a class="button-basic" href="#">Подробнее</a>
-                        <button class="button button-favorite"type="submit">В избранное</button>
+                        <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
+                        <button class="button button-favorite"type="submit">В ИЗБРАННОЕ</button>
                     </li>
                 </ul>
             </section>
@@ -193,9 +193,9 @@
                 </li>
             </ul>
 
-            <section class="submition">
+            <section class="submition submition-inner">
                 <h2>Подпишитесь на рассылку</h2>
-                <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+                <p class="submit-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
                     <label class="visually-hidden" for="subscribe-email">
                         Укажите ваш e-mail

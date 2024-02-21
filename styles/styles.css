@@ -1,6 +1,6 @@
 /*Подключаем шрифты*/
 @font-face {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
     src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -34,18 +34,42 @@ body {
 .hero {
     background-color: #cd853f;
     /*фон, если не загрузятся картинки*/
-    background-image: url(../images/index-background.jpg);
-    background-size: cover;
+    background-image:url(../images/divider.svg), url(../images/index-background.jpg);
+    background-size:100% auto, cover;
+    background-position:left bottom, left top;
+    background-repeat:no-repeat;
 }
 
-.submition,
-.bg {
+/*Блок подписки*/
+.submition
+ {
     background-color: #cd853f;
     /*фон, если не загрузятся картинки*/
-    background-image: url(../images/subscribe.jpg);
+    background-image:url(../images/subscribe.jpg);
     background-size: cover;
+    background-repeat:no-repeat;
 }
+.submition-inner{background-image:none;
+background-color:#ffffff;}
+.submit-inner{color:#333333;}
 
+/*Фильтры*/
+.bg {background-color: #cd853f;
+    /*фон, если не загрузятся картинки*/
+    background-image:url(../images/background-filter.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+color:#ffffff;
+}
+.filter-title{font-family:inherit;
+font-size:20px;
+font-weight:700;
+line-height:24px;
+}
+.filter-item{font-family:inherit;
+font-size:18px;
+font-weight:400;
+line-height:23px;}
 
 /*Стилизуем хедер*/
 .page-header {
@@ -60,7 +84,7 @@ body {
     font-size: 20px;
     font-style: normal;
     text-decoration: none;
-    color: inherit;
+    color: #000000;
 }
 
 /*Определяем размер шрифта для заголовков*/
@@ -70,6 +94,7 @@ h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
+    color:#000000;
 }
 
 h3 {
@@ -78,6 +103,7 @@ h3 {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+    color:#000000;
 }
 
 /*Подзаголовки,описание под Н2*/
@@ -86,6 +112,7 @@ h3 {
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
+
 }
 
 /*Стилизуем футер*/
@@ -93,12 +120,7 @@ h3 {
     background-color: #ffffff;
 }
 
-.phone {
-    width: 331px;
-    height: 40px;
-    text-decoration: none;
-    color: inherit;
-}
+
 
 .social-link {
     text-decoration: none;
@@ -135,6 +157,8 @@ h3 {
 .advantages,
 .hotels {
     background-color: #ffffff;
+
+
 }
 
 .container {
@@ -176,8 +200,6 @@ h3 {
 .button {
     font-family:inherit;
     font-weight: 700;
-    width: 140px;
-    height: 36px;
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
@@ -185,25 +207,19 @@ h3 {
     border-color: transparent;
     padding: 8px 50px 8px 50px;
     background-color: #82b3d3;
-    text-align: center;
+    
 
 }
 
-.button-wish {
-    width: 160px;
-}
 
 .button-submit {
+font-family:inherit;
     width: 232px;
     height: 52px;
     font-size: 20px;
     border-radius: 0 4px 4px 0;
 }
 
-.button-search {
-    width: 376px;
-    height: 52px;
-}
 
 /*Ссылки*/
 .button-basic {
@@ -213,11 +229,10 @@ h3 {
     line-height: 20px;
     color: #ffffff;
     border-radius: 4px;
-    width: 140px;
-    height: 36px;
     background-color: #756157;
     padding: 8px 50px 8px 50px;
     text-decoration: none;
+
 }
 
 
@@ -228,15 +243,13 @@ h3 {
 
 
 
-.rate {
+.rate {font-family:inherit;
+font-weight:400;
+font-size:15px;
+line-height:20px;
     background-color: #f2f2f2;
-    width: 140px;
-    height: 37px;
-    border-radius: 4px;
+border-radius: 4px;}
 
-    padding-top: 9px;
-    margin-left: 183px;
-}
 
 .star {
     width: 140px;
@@ -248,12 +261,13 @@ h3 {
 }
 
 
-.subscribe-email {
+#subscribe-email {
     background-color: #f2f2f2;
-    font-family: PT Sans, sans-serif;
-
+    font-family: inherit;
+    border-color: transparent;
     font-size: 18px;
     line-height: 24px;
+    color:#000000;
 }
 
 .button-reset {
@@ -264,15 +278,16 @@ h3 {
     padding: 8px 50px 8px 50px;
 }
 
-.phone {
-    font-family:
-        PT Sans, sans-serif;
+.phone {font-family:
+        inherit;
     font-weight:
         400;
     font-size:
         40px;
     line-height:
         40px;
+text-decoration:none;
+color:#000000;
 }
 
 
@@ -297,7 +312,7 @@ h3 {
     background-color: #615048;
 }
 
-.button-submit:visited {
+.button-submit:disabled {
     background-color: #7db54f;
 }
 
