@@ -15,9 +15,17 @@
     font-display: swap;
 }
 
+html{height:100%;
+}
+
+
 
 /*Базовый стиль для всех страниц, наследуется*/
 body {
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    min-height:100%;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -25,21 +33,193 @@ body {
     font-style: normal;
     color: #333333;
     background-color: #f2f2f2;
-    text-align: center;
+
+
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
+/*Центрируем страницу*/
+.main-wrap{box-shadow: 0 0 15px 0 #00000033;
+flex-grow:1;
+margin:0 auto;
+width:1200px;
+min-height:100%;}
+
+
+
+.page-header{
+margin:0 auto;
+display:flex;
+
+
+}
+
+.navigation{display:flex;
+margin:0 auto;
+justify-content:space-between;
+width:1200px;
+padding-left:70px;padding-right:70px;
+}
+
+.navigation-list{display:flex;
+margin:0;
+padding:0;
+width:500px;
+list-style-type:none;
+flex-wrap:wrap;
+
+}
+
+.navigation-user{display:flex;
+list-style-type:none;
+width:280px;
+margin-left:auto;
+flex-wrap:wrap;
+justify-content:flex-end;
+align-items:center;
+margin:0;
+}
+
+
+
+.navigation-logo{width:140px;
+display:block;
+height:70px;
+margin-right:28px;}
+
+.logo-image{display:block;
+margin:0 auto;
+padding:51px 371px 82px 371px;
+
+}
+
+.page-container{width:1200px;
+margin:0 auto;
+text-align:center;
+
+ }
+.navigation-user-link{width:20px;height:20px;padding:22px 12px 22px 12px;}
+.navigation-link{display:block;}
+
+.hotel-search{
+text-align:center;
+padding:96px 304px 96px 304px;
+margin:0;}
+
+.bridge{flex-direction:row-reverse;}
+
+.advantages-begin{padding:69px 274px 69px 274px;}
+.advantages-list{width:1200px;
+flex-wrap:wrap;
+align-items:center;
+margin:0; padding:0;
+text-align:center;
+display:flex;
+list-style:none;
+justify-content:space-between;
+box-sizing:content-box;
+flex-direction:row;
+}
+.advantages-item{width:400px;height:385px;
+
+background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-intense{display:flex;width:1200px;height:385px;
+}
+
+.advantages-item-light{width:400px;height:385px;
+}
+.item{padding:112px 85px;}
+.advantages-text{padding:0;margin:0;}
+
+
+.image-1, .image-2{width:800px; height:385px;}
+
+.photo-1{align-self:flex-end;}
+
+
+
+.offers-list{width:1200px;
+display:flex;
+list-style:none;
+margin:0;
+padding:0;
+text-align:center;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.offers-item-food {width:230px;
+padding:81px 85px 81px 85px;
+}
+
+.offers-item {width:230px;
+padding:81px 85px 81px 85px;
+    background-color: rgba(131, 179, 211, 0.12);
+}
+.recomend{margin:0;padding:0;}
+.page-footer{display:flex;
+width:1060px;
+margin:0 auto;
+padding-left:70px;
+padding-right:70px;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+background-color:#ffffff;}
+
+.social-list{width:142px;
+height:40px;}
+
+.footer-social-item{display:inline;
+width:24px;
+height:14px;}
+
+.social-link-telegram{
+background-image:url(../images/socials/telegram.svg);
+background-repeat:no-repeat;}
+
+.social-link-vkontakte{
+background-image:url(../images/socials/vk.svg);
+background-repeat:no-repeat;}
+
+.social-list{max-width:160px;}
+
+.social-link-utube{
+background-image:url(../images/socials/utube.svg);
+background-repeat:no-repeat;}
+
+.htmlacademy-link {min-width:115px;
+height:33px;
+background-image:url(../images/logos/logo-academy.svg);
+}
 
 /*Вставляем фоновые картинки*/
 .hero {
     background-color: #cd853f;
     /*фон, если не загрузятся картинки*/
     background-image:url(../images/divider.svg), url(../images/index-background.jpg);
-    background-size:100% auto, cover;
-    background-position:left bottom, left top;
+    background-size:1200px 57px, cover;
+    background-position:right bottom -1px, left top;
     background-repeat:no-repeat;
-}
 
+
+}
+.subscribe-form{border-color: transparent;
+justify-content:space-between; margin:0 auto;display:flex;
+width:648px;
+margin:0;}
 /*Блок подписки*/
 .submition
  {
@@ -75,9 +255,10 @@ line-height:23px;}
 .page-header {
     background-color: #ffffff;
 }
-
+.navigation-link{padding:20px 16px;}
 .navigation-link,
-.navigation-user-link {
+.navigation-user-link {display:block;
+
     font-family: "PT Sans", sans-serif;
     line-height: 24px;
     font-weight: 700;
@@ -88,32 +269,54 @@ line-height:23px;}
 }
 
 /*Определяем размер шрифта для заголовков*/
-h2 {
-    font-family: "PT Sans", sans-serif;
+.title{
+    font-family:inherit;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     color:#000000;
+    text-transform:uppercase;
+    padding-bottom:20px;
+margin:0;
 }
 
-h3 {
-    font-family: "PT Sans", sans-serif;
+.advantages-title{
+    font-family: inherit;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     color:#000000;
+    text-transform:uppercase;
+padding-bottom:30px;
+margin:0;
 }
+
+.picture {
+color:#ffffff;
+}
+.submition-title{
+
+color:#ffffff;
+} 
+.info{font-size:22px;line-height:26px;
+padding-bottom:54px; margin:0;} 
 
 /*Подзаголовки,описание под Н2*/
 .subtitle {
-    font-family: "PT Sans", sans-serif;
+    font-family: inherit;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
+margin:0;
 
 }
+
+.button-basic.button-search{box-sizing:border-box;
+width:376px;height:52px;
+font-size:20px;line-height:36px;}
+
 
 /*Стилизуем футер*/
 .page-footer {
@@ -140,18 +343,13 @@ h3 {
     color: #ffffff;
 }
 
-.advantages-item {
-    background-color: rgba(131, 179, 211, 0.2);
-}
+
+
 
 .advantages-item-light {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
-
-.offers-item {
-    background-color: rgba(131, 179, 211, 0.12);
-}
 
 .offers,
 .advantages,
@@ -160,7 +358,7 @@ h3 {
 
 
 }
-
+.offers-text{padding:64px 348px 64px 348px;}
 .container {
     background-color: #ffffff;
 }
@@ -168,8 +366,7 @@ h3 {
 .pagination-item {
     background-color: #82b3d3;
     color: #ffffff;
-    width: 60px;
-    height: 60px;
+    font-weight:700;
     border-radius: 4px;
     font-size: 20px;
     line-height: 36px;
@@ -194,7 +391,11 @@ h3 {
     text-decoration: none;
     color: #ffffff;
 }
-
+.breadcrumbs{
+display:flex;
+margin:0;
+padding:0;
+list-style-type:none;}
 
 /*Кнопки*/
 .button {
@@ -207,7 +408,7 @@ h3 {
     border-color: transparent;
     padding: 8px 50px 8px 50px;
     background-color: #82b3d3;
-    
+    text-transform:uppercase;
 
 }
 
@@ -222,7 +423,7 @@ font-family:inherit;
 
 
 /*Ссылки*/
-.button-basic {
+.button-basic {margin:0 auto;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -232,7 +433,7 @@ font-family:inherit;
     background-color: #756157;
     padding: 8px 50px 8px 50px;
     text-decoration: none;
-
+display:block;
 }
 
 
@@ -256,18 +457,23 @@ border-radius: 4px;}
     height: 37px;
 }
 
-.submition {
+.submition {padding:96px 258px 104px 258px;
     color: #ffffff;
 }
 
 
-#subscribe-email {
+#subscribe-email {width:452px;
     background-color: #f2f2f2;
     font-family: inherit;
     border-color: transparent;
     font-size: 18px;
     line-height: 24px;
     color:#000000;
+
+padding: 12px 20px 12px 20px;
+border-radius: 4px 0 0 4px;
+gap: 260px;
+
 }
 
 .button-reset {
@@ -288,6 +494,7 @@ border-radius: 4px;}
         40px;
 text-decoration:none;
 color:#000000;
+max-width:331px;
 }
 
 
@@ -304,16 +511,5 @@ color:#000000;
 }
 
 
-.button-basic:link {
-    background-color: #756157;
-}
 
-.button-basic:hover {
-    background-color: #615048;
-}
-
-.button-submit:disabled {
-    background-color: #7db54f;
-}
-
-
+.hotels-list{display:flex;}

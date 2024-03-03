@@ -8,11 +8,14 @@
     </head>
 
     <body>
+        <div class="main-container">
+
         <header class="page-header">
+            <nav class="navigation">
             <a class="navigation-logo" href="index.html" aria-current="page">
                 <img src="images/logos/logo.svg" width="138" height="64" alt="Логотип города Седона">
             </a>
-            <nav class="navigation">
+
                 <ul class="navigation-list">
                     <li class="navigation-item">
                         <a class="navigation-link" href="index.html">Главная</a>
@@ -24,7 +27,7 @@
                         <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
                     </li>
                 </ul>
-                <ul class="navigation-user-list">
+                <ul class="navigation-list navigation-user">
                     <li class="navigation-user-item">
                         <a class="navigation-user-link" href="#">
                             <span class="visually-hidden">
@@ -47,7 +50,8 @@
             </nav>
         </header>
 <div class="bg">
-        <main class="main-index">
+        <main class="main-index main-container">
+            <<div class="page-container">
             <header class="main-header">
                 <h1 class="main-header-title">Гостиницы Седоны</h1>
                 <ol class="breadcrumbs">
@@ -64,15 +68,15 @@
                 <form action="https://echo.htmlacademy.ru" method="get">
                     <fieldset class="filter-item">
                         <legend class="filter-title">Инфраструктура</legend>
-                        <label class="visually-hidden" for="pool">
+                        <label  for="pool">
                             <input class="control-input" type="checkbox" name="pool" id="pool" checked>
                             Бассейн
                         </label>
-                        <label class="visually-hidden" for="parking">
+                        <label for="parking">
                             <input class="control-input" type="checkbox" name="parking" id="parking" checked>
                             Парковка
                         </label>
-                        <label class="visually-hidden" for="wi-fi">
+                        <label  for="wi-fi">
                             <input class="control-input" type="checkbox" name="wi-fi" id="wi-fi" checked>
                             Wi-Fi
                         </label>
@@ -80,22 +84,22 @@
                     <h2 class="visually-hidden">Тип жилья</h2>
                     <fieldset class="filter-item">
                         <legend class="filter-title">Тип жилья:</legend>
-                        <label class="visually-hidden" for="hotel">
+                        <labels for="hotel">
                             <input type="radio" id="hotel" name="type" value="hotel">Гостиница</label>
-                        <label class="visually-hidden" for="motel">
+                        <label  for="motel">
                             <input type="radio" id="motel" name="type" value="motel">Мотель</label>
-                        <label class="visually-hidden" for="apartaments">
+                        <label for="apartaments">
                             <input type="radio" id="apartaments" name="type" value="apartaments">Апартаменты</label>
                     </fieldset>
                     <h2 class="visually-hidden">Стоимость, ₽:</h2>
                     <fieldset class="filter-item">
                         <legend class="filter-title">Стоимость, ₽:</legend>
-                        <label class="visually-hidden" for="minimum">
+                        <label class for="minimum">
                             От
                             <input type="number" name="minimum" required placeholder="От" id="minimum">
                         </label>
 
-                        <label class="visually-hidden" for="maximum">
+                        <label  for="maximum">
                             До
                             <input type="number" name="maximum" required placeholder="До" id="maximum">
                         </label>
@@ -106,7 +110,7 @@
             </section>
         </div>
             <section class="hotels">
-                <h2>Найдено гостиниц:38</h2>
+                <h2 class="title">Найдено гостиниц:38</h2>
                 <select name="select-control" aria-label="Сортировка">
                     <option value="cheap">Сначала дешевые</option>
                     <option value="expensive">Сначала дорогие</option>
@@ -114,7 +118,7 @@
                 <ul class="filter-list">
                     <li class="filter-items">
                         <a class="filter-button" href="#">
-                            <span class="'visually-hidden">Расположить карточки в виде таблицы</span></a>
+                            <span class="visually-hidden">Расположить карточки в виде таблицы</span></a>
                     </li>
                     <li class="filter-items">
                         <a class="filter-button" href="#">
@@ -194,16 +198,17 @@
             </ul>
 
             <section class="submition submition-inner">
-                <h2>Подпишитесь на рассылку</h2>
+                <h2 class="title">Подпишитесь на рассылку</h2>
                 <p class="submit-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-                    <label class="visually-hidden" for="subscribe-email">
-                        Укажите ваш e-mail
+                    <label for="subscribe-email">
+
                         <input type="email" name="email" required placeholder="Ваш e-mail" id="subscribe-email">
                     </label>
                     <button class="button button-submit"="submit">Подписаться</button> <!-- кнопка, предназначенная для отправки формы -->
                 </form>
             </section>
+        </div>
         </main>
         <footer class="page-footer">
             <section class="footer-social">
@@ -237,6 +242,7 @@
                 <a class="htmlacademy-link" href="https://htmlacademy.ru/">html academy</a>
             </section>
         </footer>
+        </div>
     </body>
 
 </html>
