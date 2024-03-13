@@ -56,25 +56,148 @@ width:1200px;
 min-height:100%;}
 
 
-
-.page-header{
-margin:0 auto;
-display:flex;
-
+/*Кнопки*/
+.button {
+    font-family:inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    border-radius: 4px;
+    border-color: transparent;
+    border:none;
+    cursor:pointer;
+    background-color: #82b3d3;
+    text-transform:uppercase;
+    display:inline-block;
 
 }
 
+
+/*Ссылки*/
+.button-basic {margin:0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    border-radius: 4px;
+    background-color: #756157;
+    padding: 8px 25px 8px 25px;
+    text-decoration: none;
+display:block;
+}
+
+.button-basic:hover{background-color:#756157;}
+.button-basic:focus-visible{background-color:#615048;}
+.button-basic:active{background-color:#615048;}
+.button-basic:disabled{background-color:#e5e5e5; color:#ffffff;}
+
+
+.button-submit {
+    font-family:inherit;
+    font-size:20px;
+    line-height:36px;
+    width: 232px;
+    padding:8px 0 8px 0;
+    border:none;
+    border-radius: 0 4px 4px 0;
+}
+
+.button-submit:hover{background-color:#68a2ca;}
+.button-submit:focus-visible{background-color:#68a2ca;}
+.button-submit:active{background-color:#82b3d3;}
+.button-submit:disabled{background-color:#e5e5e5; color:#ffffff;}
+
+.button-basic.button-search{box-sizing:border-box;
+width:376px;
+height:52px;
+font-size:20px;
+line-height:36px;
+margin:0 auto;}
+
+.button-favorite:hover{background-color:#68a2ca;}
+.button-favorite:focus-visible{background-color:#68a2ca;}
+.button-favorite:active{background-color:#82b3d3;}
+.button-favorite:disabled{background-color:#e5e5e5; color:#ffffff;}
+
+.button-basic:hover{background-color:#756157;}
+.button-basic:focus-visible{background-color:#615048;}
+.button-basic:active{background-color:#615048;}
+.button-basic:disabled{background-color:#e5e5e5; color:#ffffff;}
+
+.added{background-color:#7db54f;}
+.added:hover{background-color:#6c9e42;}
+.added:focus-visible{background-color:#6c9e42;}
+.added:active{background-color:#7db54f;}
+.added:disabled{background-color:#e5e5e5; color:#ffffff;}
+
+.button-check:hover{background-color:#68a2ca;}
+.button-check:focus-visible{background-color:#68a2ca;}
+.button-check:active{background-color:#82b3d3;}
+.button-check:disabled{background-color:#e5e5e5; color:#ffffff;}
+
+.button-reset {
+    background-color: transparent;
+    width: 191px;
+    height: 36px;
+    border-radius: 4px;
+    padding: 8px 50px 8px 50px;
+}
+
+.button-reset:hover{background-color:transparent;
+ color:rgba(255,255,255,0.6);}
+.button-reset:focus-visible{background-color:transparent;
+ outline:3px solid #83b3d3; color:#ffffff;}
+.button-reset:active{background-color:transparent;
+ color:rgba(255,255,255,0.3);}
+.button-reset:disabled{background-color:transparent; 
+ color:rgba(255,255,255,0.1);}
+
+.filter-button {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+
+/*Стилизуем хедер*/
+.page-header {
+    background-color: #ffffff;
+}
+.navigation-link{padding:20px 16px;}
+.navigation-link,
+.navigation-user-link {display:block;
+
+    font-family: "PT Sans", sans-serif;
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo{display:block;
+width:140px;height:auto;
+margin-bottom:-6px;
+object-fit:contain;}
+
+.navigation-logo{width:140px;
+display:block;
+margin-right:28px;}
+
 .navigation{display:flex;
-margin:0 auto;
-justify-content:space-between;
-width:1200px;
-padding-left:70px;padding-right:70px;
+padding-left:70px;
+padding-right:70px;
 }
 
 .navigation-list{display:flex;
-margin:0;
+margin:0 auto 0 0;
 padding:0;
-width:500px;
 list-style-type:none;
 flex-wrap:wrap;
 
@@ -88,28 +211,50 @@ flex-wrap:wrap;
 justify-content:flex-end;
 align-items:center;
 margin:0;
+padding:0;
 }
 
+.navigation-user-link{position:relative;
+width:20px;height:20px;padding:22px 12px 22px 12px;}
 
-
-.navigation-logo{width:140px;
+.navigation-user-link::before {content:"";
 display:block;
-height:70px;
-margin-right:28px;}
+min-width:18px;
+min-height:18px;
+background-color:#000000;
+mask-repeat:no-repeat;mask-position:center;
+}
+.search::before{
+mask-image:url("../images/icons/search.svg");}
 
+
+.heart::before {content:"";
+mask-image:url("../images/icons/heart.svg");
+mask-repeat:no-repeat;mask-position:center;
+}
+.user-favorites{
+width:20px;
+height:20px; 
+border-radius:10px;
+background-color:#7db54f;
+position:absolute;
+top:11px;
+right:4px;
+padding:5px;
+box-sizing:border-box;
+color:#ffffff;
+font-size:10px;line-height:10px;}
+
+
+
+.wish{width:160px; text-align:center;}
 .logo-image{display:block;
 margin:0 auto;
 padding:51px 371px 82px 371px;
 
 }
 
-.page-container{width:1200px;
-margin:0 auto;
-text-align:center;
 
- }
-.navigation-user-link{width:20px;height:20px;padding:22px 12px 22px 12px;}
-.navigation-link{display:block;}
 
 .hotel-search{
 text-align:center;
@@ -144,13 +289,14 @@ background-color: rgba(131, 179, 211, 0.2);
 .advantages-text{padding:0;margin:0;}
 
 
-.image-1, .image-2{width:800px; height:385px;}
+.image-1, .image-2{display:block;width:800px; height:385px;}
 
 .photo-1{align-self:flex-end;}
 
 
 
 .offers-list{width:1200px;
+
 display:flex;
 list-style:none;
 margin:0;
@@ -160,54 +306,98 @@ align-items:center;
 flex-wrap:wrap;
 }
 
-.offers-item-food {width:230px;
+.offers-item-food {
+width:230px;
 padding:81px 85px 81px 85px;
+
 }
+.food{background-image:url(../images/icons/burger-icon.svg);
+background-repeat:no-repeat;
+background-position:top center;
+}
+
+.house{background-image:url(../images/icons/house-icon.svg);
+background-repeat:no-repeat;
+background-position:top center;}
+.gift{background-image:url(../images/icons/gift-box-icon.svg);
+background-repeat:no-repeat;
+background-position:top center;}
 
 .offers-item {width:230px;
 padding:81px 85px 81px 85px;
     background-color: rgba(131, 179, 211, 0.12);
 }
 .recomend{margin:0;padding:0;}
+
+
+
+/*Стилизуем футер*/
+
 .page-footer{display:flex;
-width:1060px;
-margin:0 auto;
-padding-left:70px;
-padding-right:70px;
+padding:40px 70px 30px 70px;
+ list-style-type: none;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
 background-color:#ffffff;}
 
-.social-list{width:142px;
-height:40px;}
 
-.footer-social-item{display:inline;
-width:24px;
-height:14px;}
 
+
+
+
+.social-list{max-width:160px;
+margin:0;
+padding:0;
+display:flex;
+ list-style-type: none;
+}
+
+
+.social-link {display:block;
+width:48px; height:40px;
+    text-decoration: none;
+    color: inherit;
+text-decoration:none;
+background-position:center;
+}
+
+.social-link-vkontakte::before{content:"";
+mask-image:url(../images/socials/vk.svg);
+mask-repeat:no-repeat;
+
+}
 .social-link-telegram{
 background-image:url(../images/socials/telegram.svg);
 background-repeat:no-repeat;}
 
-.social-link-vkontakte{
-background-image:url(../images/socials/vk.svg);
-background-repeat:no-repeat;}
+.social-link:hover{background-color:#000000;}
 
-.social-list{max-width:160px;}
+.social-link::before{content:"";}
 
-.social-link-utube{
-background-image:url(../images/socials/utube.svg);
-background-repeat:no-repeat;}
+.social-link-utube::before{
+content: "";
+  display: block;
+  min-width: 25px;
+  min-height: 18px;
+  background-color: #82b3d3;
+  mask-image: url("../images/socials/utube.svg")
+;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
 
 .htmlacademy-link {min-width:115px;
 height:33px;
 background-image:url(../images/logos/logo-academy.svg);
-}
+ text-decoration: none;
+    color: inherit;}
+
+.footer-social-item {text-decoration: none;}
 
 /*Вставляем фоновые картинки*/
 .hero {
-    background-color: #cd853f;
+    background-color: #000099;
     /*фон, если не загрузятся картинки*/
     background-image:url(../images/divider.svg), url(../images/index-background.jpg);
     background-size:1200px 57px, cover;
@@ -216,57 +406,46 @@ background-image:url(../images/logos/logo-academy.svg);
 
 
 }
-.subscribe-form{border-color: transparent;
-justify-content:space-between; margin:0 auto;display:flex;
-width:648px;
-margin:0;}
+
 /*Блок подписки*/
 .submition
  {
-    background-color: #cd853f;
+    background-color: #000099;
     /*фон, если не загрузятся картинки*/
     background-image:url(../images/subscribe.jpg);
     background-size: cover;
     background-repeat:no-repeat;
+padding:96px 258px 104px 258px;
+    color: #ffffff;
 }
 .submition-inner{background-image:none;
 background-color:#ffffff;}
-.submit-inner{color:#333333;}
 
-/*Фильтры*/
-.bg {background-color: #cd853f;
-    /*фон, если не загрузятся картинки*/
-    background-image:url(../images/background-filter.jpg);
-    background-size: cover;
-    background-repeat:no-repeat;
-color:#ffffff;
-}
-.filter-title{font-family:inherit;
-font-size:20px;
-font-weight:700;
-line-height:24px;
-}
-.filter-item{font-family:inherit;
-font-size:18px;
-font-weight:400;
-line-height:23px;}
 
-/*Стилизуем хедер*/
-.page-header {
-    background-color: #ffffff;
-}
-.navigation-link{padding:20px 16px;}
-.navigation-link,
-.navigation-user-link {display:block;
 
-    font-family: "PT Sans", sans-serif;
+
+.subscribe-form{border-color: transparent;
+display:flex;
+align-items:flex-start;
+}
+
+#subscribe-email {width:412px;
+    background-color: #f2f2f2;
+    font-family: inherit;
+    border-color: transparent;
+    font-size: 18px;
     line-height: 24px;
-    font-weight: 700;
-    font-size: 20px;
-    font-style: normal;
-    text-decoration: none;
-    color: #000000;
+    color:#000000;
+
+padding: 12px 20px 12px 20px;
+border-radius: 4px 0 0 4px;
+
+
 }
+
+
+
+
 
 /*Определяем размер шрифта для заголовков*/
 .title{
@@ -279,8 +458,8 @@ line-height:23px;}
     text-transform:uppercase;
     padding-bottom:20px;
 margin:0;
+text-align:center;
 }
-
 .advantages-title{
     font-family: inherit;
     font-style: normal;
@@ -290,18 +469,51 @@ margin:0;
     color:#000000;
     text-transform:uppercase;
 padding-bottom:30px;
+padding-top:102px;
 margin:0;
+
 }
 
+.advantages-titles{   margin:0;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color:#000000;
+    text-transform:uppercase;
+    margin-bottom:30px;
+ 
+
+}
 .picture {
 color:#ffffff;
 }
+.advantages-titles::after{background-color:rgba(0,0,0,0.3);
+content:"";
+display:block;
+height:2px;
+width:60px;
+margin:30px auto 0;}
+}
+
+.first-title{text-align:center;
+color:#ffffff;}
+.picture::after{background-color:rgba(255,255,255,0.3);
+content:"";
+display:block;
+height:2px;
+width:60px;
+margin:30px auto 0;}
+
+.item-big{padding:102px 85px;}
+
 .submition-title{
 
 color:#ffffff;
 } 
 .info{font-size:22px;line-height:26px;
-padding-bottom:54px; margin:0;} 
+padding-bottom:54px; margin:0;text-align:center;} 
 
 /*Подзаголовки,описание под Н2*/
 .subtitle {
@@ -313,27 +525,8 @@ margin:0;
 
 }
 
-.button-basic.button-search{box-sizing:border-box;
-width:376px;height:52px;
-font-size:20px;line-height:36px;}
 
 
-/*Стилизуем футер*/
-.page-footer {
-    background-color: #ffffff;
-}
-
-
-
-.social-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.htmlacademy-link {
-    text-decoration: none;
-    color: inherit;
-}
 
 
 
@@ -363,7 +556,19 @@ font-size:20px;line-height:36px;}
     background-color: #ffffff;
 }
 
-.pagination-item {
+
+.pagination{display:flex;
+margin:0;
+padding:0;
+background-color:#ffffff;
+padding-left:70px;
+padding-right:70px;
+flex-wrap:wrap;}
+
+.pagination-item {min-width:24px;
+list-style-type:none;
+margin:0;padding:0;
+padding:12px 18px 12px 18px;
     background-color: #82b3d3;
     color: #ffffff;
     font-weight:700;
@@ -371,20 +576,12 @@ font-size:20px;line-height:36px;}
     font-size: 20px;
     line-height: 36px;
     padding-top: 11px;
-    margin-left: 23px;
-
+    margin-right: 8px;
+text-align:center;
 }
 
-
-/*Заголовок каталога*/
-.main-header-title {
-    font-family:inherit;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 78px;
-    color: #ffffff;
-}
+.first-pag-number{background-color:#f2f2f2;color:#000000;}
+.ellipses{background-color:#ffffff;}
 
 /*Крошки*/
 .breadcrumbs-link {
@@ -397,92 +594,9 @@ margin:0;
 padding:0;
 list-style-type:none;}
 
-/*Кнопки*/
-.button {
-    font-family:inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-    border-radius: 4px;
-    border-color: transparent;
-    padding: 8px 50px 8px 50px;
-    background-color: #82b3d3;
-    text-transform:uppercase;
-
-}
-
-
-.button-submit {
-font-family:inherit;
-    width: 232px;
-    height: 52px;
-    font-size: 20px;
-    border-radius: 0 4px 4px 0;
-}
-
-
-/*Ссылки*/
-.button-basic {margin:0 auto;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-    border-radius: 4px;
-    background-color: #756157;
-    padding: 8px 50px 8px 50px;
-    text-decoration: none;
-display:block;
-}
-
-
-.filter-button {
-    text-decoration: none;
-    color: inherit;
-}
 
 
 
-.rate {font-family:inherit;
-font-weight:400;
-font-size:15px;
-line-height:20px;
-    background-color: #f2f2f2;
-border-radius: 4px;}
-
-
-.star {
-    width: 140px;
-    height: 37px;
-}
-
-.submition {padding:96px 258px 104px 258px;
-    color: #ffffff;
-}
-
-
-#subscribe-email {width:452px;
-    background-color: #f2f2f2;
-    font-family: inherit;
-    border-color: transparent;
-    font-size: 18px;
-    line-height: 24px;
-    color:#000000;
-
-padding: 12px 20px 12px 20px;
-border-radius: 4px 0 0 4px;
-gap: 260px;
-
-}
-
-.button-reset {
-    background-color: transparent;
-    width: 191px;
-    height: 36px;
-    border-radius: 4px;
-    padding: 8px 50px 8px 50px;
-}
 
 .phone {font-family:
         inherit;
@@ -499,6 +613,138 @@ max-width:331px;
 
 
 
+
+
+/*Каталог*/
+.page-container-inner{background-color: #000099;
+    /*фон, если не загрузятся картинки*/
+    background-image:url(../images/background-filter.jpg);
+    background-repeat:no-repeat;
+    padding-left:70px;
+    padding-right:70px;
+
+ }
+/*Заголовок каталога*/
+.main-header-title {
+    font-family:inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+    color: #ffffff;
+    margin:0;
+padding-top:35px;
+padding-bottom:8px;
+}
+
+.hotels-list{display:grid;
+padding:0 70px 80px 70px;
+margin:0;
+grid-template-columns:340px 340px 340px;
+gap:20px;
+}
+
+.hotels-item{list-style-type:none;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 16px 20px;
+  border-size:1px;border-color:#e6e6e6;}
+
+.card{
+  display: block;
+  grid-column: 1 / -1;
+  order:-1;
+}  
+
+.hotel-title{grid-column: 1 / -1;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin:0;}
+
+.rate {font-family:inherit;
+    font-weight:400;
+    font-size:15px;
+    line-height:20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    text-align:center;
+    padding:9px 22px 8px 23px;
+    margin:0;
+}
+.star {
+    width: 140px;
+    height: 37px;
+    margin:0;
+}
+.host, .price{margin:0;}
+
+.price{text-align:end;}
+
+.submit-inner{margin:0;
+padding-bottom:54px;
+text-align:center;
+color:#333333;}
+
+.hotel-begin{
+padding:40px 70px 30px 70px;
+justify-content:space-between;}
+
+.view-list{display:flex;
+padding:0;
+margin:0;
+list-style-type:none;
+justify-content:space-between;
+width:160px;
+
+}
+.filter-items{width:48px;height:48px;
+background-repeat:no-repeat;
+background-position:center;}
+
+.table{background-image:url(../images/icons/mode-table.svg);}
+
+.full-screen{background-image:url(../images/icons/mode-full-screen.svg);}
+
+.list{background-image:url(../images/icons/mode-list.svg);}
+
+
+
+.hotel-begin{display:flex;}
+
+.form-filter{display:flex;}
+/*Фильтры*/
+
+.filter-title{font-family:inherit;
+font-size:20px;
+font-weight:700;
+line-height:24px;margin-bottom:32px;
+}
+.filter-item{font-family:inherit;
+font-size:18px;
+font-weight:400;
+line-height:23px;
+color:#ffffff;width:150px;min-height:157px;
+border:none;
+margin-right:70px;
+padding:0;
+
+}
+.filter-list{list-style-type:none;
+margin:0;padding:0;}
+.filter-choose{padding-bottom:16px;}
+.breadcrumbs{margin-bottom:40px;}
+.filter-choose:last-child{margin-bottom:54px;}
+
+.check-reset{display:flex;
+flex-direction:column;margin-left:auto;}
+
+
 .button-check {
     width: 191px;
     height: 36px;
@@ -508,8 +754,20 @@ max-width:331px;
         16px;
     line-height:
         20px;
+
+margin-top:56px;
+margin-bottom:32px;
 }
+.price-choose{margin-left:70px;}
+.minmax{display:flex;
+justify-content:space-between;}
 
-
-
-.hotels-list{display:flex;}
+.min, .max{background-color:#f2f2f2;
+width:143px;
+min-height:48px;
+border-radius:4px 0 0 4px;
+border-color:rgba(255,255,255,0.6);
+text-align:end;
+font-family:inherit;
+}
+.max{border-radius:0 4px 4px 0; }
