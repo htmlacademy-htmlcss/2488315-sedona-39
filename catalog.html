@@ -10,7 +10,7 @@
     <body>
         <div class="main-wrap">
 
-        <header class="page-header">
+        <header class="page-header" data-test="header">
             <nav class="navigation">
             <a class="navigation-logo" href="index.html" aria-current="page">
                 <img class="logo" src="images/logos/logo.svg" width="138" height="64" alt="Логотип города Седона">
@@ -50,20 +50,22 @@
             </nav>
         </header>
 
-        <main class="main-index main-container">
+        <main class="main-index main-container" data-test="main">
             <div class="page-container-inner">
             <header class="main-header">
                 <h1 class="main-header-title">Гостиницы Седоны</h1>
                 <ol class="breadcrumbs">
                     <li class="breadcrumbs-item">
-                        <a class="breadcrumbs-link" href="index.html"></a>
+                        <a class="breadcrumbs-link icon-to-main" href="index.html">
+                            <span class="visually-hidden">Перейти на главную страницу</span>
+                        </a>
                     </li>
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link">Гостиницы</a>
                     </li>
                 </ol>
             </header>
-            <section class="filter-lists">
+            <section class="filter-lists" data-test="filter">
                 <h2 class="visually-hidden">Инфраструктура</h2>
                 <form action="https://echo.htmlacademy.ru" method="get">
                     <div class="form-filter">
@@ -85,7 +87,7 @@
                         </label></li>
                         <li class="filter-choose">
                         <label class="control" for="wi-fi">
-                            <input class="visually-hidden control-input" type="checkbox" name="wi-fi" id="wi-fi" checked>
+                            <input class="visually-hidden control-input" type="checkbox" name="wi-fi" id="wi-fi">
 
                             <span class="control-mark"></span>
                             <span class="control-label">Wi-Fi</span>
@@ -125,21 +127,21 @@
                     <h2 class="visually-hidden">Стоимость, ₽:</h2>
                     <fieldset class="filter-item price-choose">
                         <legend class="filter-title">Стоимость, ₽:</legend>
-
-                        <label class="visually-hidden" for="minimum">
+                        <div class="minmax">
+                        <label class="price-begin" for="minimum">
                             от  </label>
-                            <div class="minmax">
-                            <input class="min price" type="number" name="minimum" required placeholder="от" id="minimum">
+
+                            <input class="min" type="number" name="minimum" value="0" id="minimum">
 
 
-                        <label class="visually-hidden"  for="maximum">
+                        <label class="price-end"  for="maximum">
                             до</label>
-                            <input class="max price" type="number"  name="maximum" required placeholder="до" id="maximum">
+                            <input class="max" type="number"  name="maximum" value="9000" id="maximum">
 
                        </div>
                        <div class="range">
                         <div class="range-scale">
-                            <div class="range-bar" style="left:230px;width:55px;">
+                            <div class="range-bar" style="left:230px;width:59px;">
                                 <button type="button" class="range-toggle toggle-min">
                                 </button>
                                 <button type="button" class="range-toggle toggle-max"></button>
@@ -157,7 +159,7 @@
                 </form>
             </section>
         </div>
-            <section class="hotels">
+            <section class="hotels" data-test="catalog">
                 <div class="hotel-begin">
                 <h2 class="title title-found">Найдено гостиниц: 38</h2>
                 <select class="price-sorting" name="select-control" aria-label="Сортировка">
@@ -209,7 +211,7 @@
                             <p class="price">От 5000 ₽</p>
 
                         <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
-                        <button class="button button-favorite added"type="submit">В ИЗБРАННОМ</button>
+                        <button class="button button-favorite added" type="submit">В ИЗБРАННОМ</button>
                         <p class="star stars-4">
                             <span class="visually-hidden">4 звезды</span>
                         </p>
@@ -225,7 +227,7 @@
                         <p class="price">От 2500 ₽</p>
 
                         <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
-                        <button class="button button-favorite"type="submit">В ИЗБРАННОЕ</button>
+                        <button class="button button-favorite" type="submit">В ИЗБРАННОЕ</button>
                         <p class="star stars-3">
                             <span class="visually-hidden">3 звезды</span>
                         </p>
@@ -242,7 +244,7 @@
                         <p class="price">От 1500 ₽</p>
 
                         <a class="button-basic" href="#">ПОДРОБНЕЕ</a>
-                        <button class="button button-favorite"type="submit">В ИЗБРАННОЕ</button>
+                        <button class="button button-favorite" type="submit">В ИЗБРАННОЕ</button>
                         <p class="star stars-2">
                             <span class="visually-hidden">2 звезды</span>
                         </p>
@@ -251,47 +253,47 @@
                 </ul>
             </section>
             <ul class="pagination">
-                <li class="pagination-item first-pag-number">
+                <li class="pagination-item">
                     <a class="pagination-link pagination-current">1
                     </a>
                 </li>
                 <li class="pagination-item">
-                    <a class="pagination-link pagination-current">2
+                    <a class="pagination-link" href="#">2
                     </a>
                 </li>
                 <li class="pagination-item">
-                    <a class="pagination-link pagination-current">3
+                    <a class="pagination-link" href="#">3
                     </a>
                 </li>
                 <li class="pagination-item">
-                    <a class="pagination-link pagination-current">4
+                    <a class="pagination-link" href="#">4
                     </a>
                 </li>
                 <li class="pagination-item ellipses">
-                    <a class="pagination-link pagination-current  ellipses">. . .
+                    <a class="pagination-link ellipses" href="#">. . .
                     </a>
                 </li>
 
                 <li class="pagination-item">
-                    <a class="pagination-link pagination-current">10
+                    <a class="pagination-link" href="#">10
                     </a>
                 </li>
             </ul>
 
-            <section class="submition submition-inner">
+            <section class="submition submition-inner" data-test="subscribe">
                 <h2 class="title">Подпишитесь на рассылку</h2>
                 <p class="submit-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
                     <label for="subscribe-email">
-
+                        <span class="visually-hidden" >Укажите Ваш почтовый адрес</span>
                         <input class="subscribe-email" type="email" name="email" required placeholder="Ваш e-mail" id="subscribe-email">
                     </label>
-                    <button class="button button-submit"="submit">Подписаться</button> <!-- кнопка, предназначенная для отправки формы -->
+                    <button class="button button-submit">Подписаться</button> <!-- кнопка, предназначенная для отправки формы -->
                 </form>
             </section>
 
         </main>
-        <footer class="page-footer">
+        <footer class="page-footer" data-test="footer">
 
                 <ul class="social-list">
                     <li class="footer-social-item">
@@ -316,8 +318,10 @@
 
                 <a class="phone" href="tel:+78128121212">+7(812)812-12-12</a>
 
-                <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
-            </section>
+                <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+                    <span class="visually-hidden">Перейти на сайт разработчика</span>
+                </a>
+
         </footer>
         </div>
     </body>
