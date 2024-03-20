@@ -631,6 +631,7 @@ cursor:pointer;
 list-style-type:none;
 align-items:center;
 padding-bottom:60px;
+
 }
 
 
@@ -748,8 +749,9 @@ cursor:pointer;}
     background-color: #f2f2f2;
     border-radius: 4px;
     text-align:center;
-    padding:9px 22px 8px 23px;
+    padding:9px 8px 8px 5px;
     margin:0;
+text-transform:uppercase;
 }
 .star {display:flex;
     gap:6px;
@@ -897,10 +899,11 @@ font-weight:400;
 
 /*Фильтры*/
 
-.filter-title{font-family:inherit;
+.filter-title{margin:0;padding:0;font-family:inherit;
 font-size:20px;
 font-weight:700;
 line-height:24px;margin-bottom:32px;
+
 }
 .filter-item{font-family:inherit;
 font-size:18px;
@@ -936,12 +939,12 @@ margin-top:56px;
 margin-bottom:32px;
 }
 
-.price-choose{margin-left:75px;}
+.price-choose{margin-left:80px;}
 
 .minmax{display:grid;
 grid-template-columns:143px 143px;
 grid-template-rows:0;
-gap:1px;
+gap:2px;
 margin-bottom:42px;
 font-family:inherit;
 }
@@ -962,7 +965,7 @@ line-height:24px;
 color:#000000;
 font-weight:700;
 font-family:inherit;
-padding-left:20px;
+padding-left:22px;
 }
 .max{border-radius:0 4px 4px 0; }
 
