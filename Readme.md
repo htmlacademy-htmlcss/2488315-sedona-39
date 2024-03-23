@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
-* Студент: [Марина](https://up.htmlacademy.ru/htmlcss/39/user/2488315).
-* Наставник: `Неизвестно`.
-
+* Студент: [Марина Романова](https://up.htmlacademy.ru/htmlcss/39/user/2488315).
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
+* Сайт: [Мой проект Седона](https://atmosferazima.github.io/2488315-sedona-39/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
