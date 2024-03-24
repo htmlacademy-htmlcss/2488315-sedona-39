@@ -369,15 +369,19 @@ padding:0;
 display:flex;
  list-style-type: none;
 flex-wrap:wrap;
-justify-content:center;
+
 }
 
 
 .social-link {display:block;
    text-decoration: none;
     color: inherit;
-background-position:center;
+
 padding:13px 12px;
+box-sizing:border-box;
+min-width: 47px;
+  min-height: 40px;
+cursor:pointer;
 }
 
 .social-link-utube::before{display:block;
@@ -598,7 +602,7 @@ margin:0;
 
 
 
-
+.hostes{padding-left:6px;}
 
 
 /*Определяем цвет фона, шрифта в разделе преимуществ*/
@@ -717,7 +721,7 @@ padding-bottom:8px;
 }
 
 .hotels-list{display:grid;
-padding:0 70px 80px 70px;
+padding:0 70px 78px 70px;
 margin:0;
 grid-template-columns:340px 340px 340px;
 gap:20px;
@@ -789,7 +793,7 @@ color:#333333;}
 
 
 .hotel-begin{align-items:center;
-padding:50px 70px 40px 70px;
+padding:50px 70px 38px 70px;
 justify-content:space-between;display:flex;flex-wrap:wrap;}
 
 
@@ -831,8 +835,6 @@ background-position:center;
 
 
 
-
-
 .filter-button:hover{
   border-color: #000000;
 }
@@ -845,6 +847,11 @@ background-position:center;
 .filter-button:active{
   border-color: #000000;
 }
+
+
+.button-curent{border-color:#000000;}
+
+
 .table{
   background-image:url("../images/icons/mode-table.svg");
   
@@ -969,7 +976,8 @@ appearance:none;margin:0;}
 background-color:#f2f2f2;
 min-height:40px;
 border-radius:4px 0 0 4px;
-border-color:rgba(255,255,255,0.6);
+border:none;
+padding:4px 20px;
 font-size:18px;
 line-height:24px;
 color:#000000;
@@ -1007,7 +1015,7 @@ color:rgba(0, 0, 0, 0.3);
 font-weight:400;
 font-family:inherit;
 justify-self:end;
-padding:15px 20px;
+padding:14px 20px;
 }
 /*Крошки*/
 .icon-to-main{
@@ -1124,6 +1132,9 @@ background-position:center;}
 .control-label:disabled{opacity:0.1;}
 .control-mark:disabled{opacity:0.1;}
 
+
+
+
 /*Каталог-Тип жилья*/
 
 .control-radio{position:relative;
@@ -1161,6 +1172,7 @@ background-color:#ffffff;
 .radio-mark:focus-visible{outline:3px solid #83b3d3;}
 .radio-mark:active{opacity:0.3;}
 .radio-mark:disabled{opacity:0.1;}
+
 
 .logo:hover{opacity:0.6;}
 .logo:focus-visible{opacity:0.6;}
@@ -1316,7 +1328,7 @@ text-transform:uppercase;}
   border-radius: 4px;
   width: 440px;
   box-sizing: border-box;
-  background-image: url("../images/icons/calendar.svg");
+  background-image: url("../images/icons/date.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
 }
@@ -1435,7 +1447,7 @@ text-transform:uppercase;}
   border-radius: 4px 0 0 4px;
   cursor: pointer;
   position: relative;
-  background-color: #f2f2f2;
+  background-color:#f2f2f2;
 }
 
 .minus-mark::before {
@@ -1446,7 +1458,7 @@ text-transform:uppercase;}
   mask-image: url("../images/icons/minus.svg");
   mask-repeat: no-repeat;
   mask-position: center;
-  background-color: rgba(117, 97, 87, 0.3);
+  background-color: rgba(117, 97, 87, 0.8);
 }
 
 .minus-mark::after {
@@ -1499,7 +1511,7 @@ text-transform:uppercase;}
   mask-image: url("../images/icons/plus.svg");
   mask-repeat: no-repeat;
   mask-position: center center;
-  background-color: rgba(117, 97, 87, 0.3);
+  background-color: rgba(117, 97, 87, 0.8);
 }
 
 .plus-mark::after {
@@ -1575,7 +1587,7 @@ text-transform:uppercase;}
 
 .tooltip-text::after {
   content: '';
-  background-image: url("../images/icons/tooltip-arrow.svg");
+  background-image: url("../images/icons/tooltip-triangle.svg");
   width: 19px;
   height: 9px;
   position: absolute;
