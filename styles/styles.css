@@ -1364,10 +1364,6 @@ body {
     opacity: 0.3;
 }
 
-.breadcrumbs:not([href]) {
-    opacity: 0.1;
-}
-
 .range-scale {
     position: relative;
     height: 4px;
